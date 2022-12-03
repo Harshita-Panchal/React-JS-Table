@@ -1,0 +1,70 @@
+.App {
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+table {
+  border-collapse: collapse;
+
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+td {
+  border: 1px solid #E1E1E1;
+  padding: 8px 10px;
+  width: 175px;
+  color: #383838;
+
+}
+
+th {
+  border: 1px solid #E1E1E1;
+  padding: 8px 10px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #383838;
+}
+
+.email {
+  width: 220px;
+}
+
+.email a {
+  color: #0071CC;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+td img {
+  padding-right: 5px;
+}
+
+.img-contain {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  height: 14px;
+  width: 18px;
+}
