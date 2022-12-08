@@ -17,8 +17,14 @@ function TableComponent(props) {
         const sortedCurrentData = currentDataCopy.sort((a, b) => {
 
             // To get the name key inside the Person object
+            /*eslint eqeqeq:0*/
             if (sorting.key == "person") {
                 return a.person.name.localeCompare(b.person.name)
+            }
+            else if(sorting.key === "joiningDate"){
+                let D1=a[sorting.key].split('/').reverse().join('/');
+                let D2=b[sorting.key].split('/').reverse().join('/');
+                return D1.localeCompare(D2);
             }
             else {
                 return a[sorting.key].localeCompare(b[sorting.key]);
@@ -26,6 +32,7 @@ function TableComponent(props) {
         });
 
         setCurrentData(sorting.ascending ? sortedCurrentData : sortedCurrentData.reverse());
+        //react-hooks/exhaustive-deps
     }, [sorting]);
 
     // onClick function for sorting
@@ -48,7 +55,7 @@ function TableComponent(props) {
                                     {/* This is to change the title from Person to Name*/}
                                     {item.columnName === "person" ? "name" :
                                         item.columnName === "email" ? "email Address" :
-                                            item.columnName === "joiningDate" ? "joinng date" :
+                                            item.columnName === "joiningDate" ? "joining date" :
                                                 item.columnName}
 
                                     {/*  This is for sorting icon and onclick*/}
